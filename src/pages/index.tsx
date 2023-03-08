@@ -1,5 +1,6 @@
 import SEO from "@/components/SEO"
 import { Banner_onMission } from "@/components/banners/Banner_loop"
+import Accordion from "@/components/sections/Accordion"
 import { enviroment_DATA } from "@/content/environment"
 import { services_DATA } from "@/content/services"
 import Grid_gaps from "@/layouts/Grid_gaps"
@@ -21,6 +22,10 @@ const Home = () => {
 
           {/* ENVIROMENT STATEMENT BLOCK */}
           <Grid_gaps data={enviroment_DATA} />
+
+          {/* FAQs  */}
+
+          <Accordion data={null} />
         </div>
       </SmoothScroll>
     </>

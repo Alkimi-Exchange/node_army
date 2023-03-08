@@ -1,4 +1,4 @@
-import type { FC } from "react"
+import type { FC, Key } from "react"
 import Marquee from "react-fast-marquee"
 
 interface Banner_onMissionProps {
@@ -8,7 +8,14 @@ interface Banner_onMissionProps {
 
 export const Banner_onMission: FC<Banner_onMissionProps> = ({ txt, count }) => {
   // make an array of the text
-  const textArray = Array(count).fill(<p className="ml-14 uppercase">{txt}</p>)
+  let textArray = []
+  for (let i = 0; i < count; i++) {
+    textArray.push(
+      <p key={i} className="ml-14 uppercase">
+        {txt}
+      </p>
+    )
+  }
 
   return (
     <Marquee
