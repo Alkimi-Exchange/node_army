@@ -11,7 +11,7 @@ interface Grid_gapsProps {
 const Grid_gaps: FC<Grid_gapsProps> = ({ data }) => {
   return (
     <article className="container pt-[60px] pb-20 sm:pt-20 sm:pb-[140px]">
-      <H2 className="mb-[60px]">{data.title}</H2>
+      <H2 className="mb-[60px] uppercase">{data.title}</H2>
 
       <div className={`grid sm:grid-cols-2 xl:grid-cols-3 gap-[30px] lg:gap-y-[60px] grid-wrapper`}>
         {data.blocks.map((block, index) => {
@@ -48,10 +48,12 @@ const Grid_block: FC<Grid_gaps_block_TYPE> = ({ type, title, content, icon, vide
     case "text":
       return (
         <>
-          <H3 className="mb-2">{title}</H3>
+          <H3 className="mb-2 uppercase">{title}</H3>
 
           {content?.map((item, index) => (
-            <P key={index}>{item}</P>
+            <P className="opacity-70" key={index}>
+              {item}
+            </P>
           ))}
           {icon && <Image className="mt-8" src={icon} alt={title || "icon"} width={24} height={24} />}
         </>

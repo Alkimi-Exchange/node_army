@@ -1,8 +1,11 @@
-import type { FC } from "react"
+import { FC, useEffect, useState } from "react"
 
 interface TypographyProps {
   children: React.ReactNode
   className?: string
+}
+interface TyperProps {
+  txt: string[]
 }
 
 export const H2: FC<TypographyProps> = ({ children, className }) => (
@@ -11,5 +14,5 @@ export const H2: FC<TypographyProps> = ({ children, className }) => (
 export const H3: FC<TypographyProps> = ({ children, className }) => <h3 className={`text-2xl font-bold ${className || ""}`}>{children}</h3>
 
 export const P: FC<TypographyProps> = ({ children, className }) => (
-  <p className={`text-base lg:text-lg opacity-70 -tracking-[0.21px] ${className || ""}`}>{children}</p>
+  <p className={`text-base lg:text-lg -tracking-[0.21px] ${className || ""}`}>{children}</p>
 )
