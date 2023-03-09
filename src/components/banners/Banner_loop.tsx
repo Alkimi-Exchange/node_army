@@ -32,3 +32,22 @@ export const Banner_onMission: FC<Banner_onMissionProps> = ({ txt, count }) => {
     </Marquee>
   )
 }
+
+import Image from "next/image"
+import digital_ocean_SVG from "@/assets/icons/tech/digital_ocean.svg"
+import akamai_SVG from "@/assets/icons/tech/akamai.svg"
+import aws_SVG from "@/assets/icons/tech/aws.svg"
+import vultr_SVG from "@/assets/icons/tech/vultr.svg"
+import google_cloud_SVG from "@/assets/icons/tech/google_cloud.svg"
+
+export const Banner_logos: FC = () => {
+  return (
+    <Marquee gradient={false}>
+      <Image className="mr-[140px]" src={digital_ocean_SVG} alt="Digital Ocean" />
+      <Image className="mr-[140px]" src={akamai_SVG} alt="Akamai" />
+      <Image className="mr-[140px]" src={aws_SVG} alt="AWS" />
+      <Image className="mr-[140px]" src={vultr_SVG} alt="Vultr" />
+      <Image className="mr-[140px]" src={google_cloud_SVG} alt="Google Cloud" />
+    </Marquee>
+  )
+}

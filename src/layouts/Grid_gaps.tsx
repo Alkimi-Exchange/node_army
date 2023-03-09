@@ -51,7 +51,9 @@ const Grid_block: FC<Grid_gaps_block_TYPE> = ({ type, title, content, icon, vide
           <H3 className="mb-2 uppercase">{title}</H3>
 
           {content?.map((item, index) => (
-            <P key={index}>{item}</P>
+            <P className="opacity-70" key={index}>
+              {item}
+            </P>
           ))}
           {icon && <Image className="mt-8" src={icon} alt={title || "icon"} width={24} height={24} />}
         </>
